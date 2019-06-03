@@ -10,14 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    var keepTitle: String?
+    var keepDetail: String?
+    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDesc: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTitle.text = dataTitle[myIndex]
-        labelDesc.text = dataDetail[myIndex]
+        labelTitle.text = keepTitle
+        labelDesc.text = keepDetail
     }
     
 

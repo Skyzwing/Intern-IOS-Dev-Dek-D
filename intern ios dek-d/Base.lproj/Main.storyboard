@@ -75,12 +75,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="insertRow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZ9-4t-RY0"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qDU-h3-rzf" id="4TM-My-0DR"/>
-                        <segue destination="Q3i-oA-vPw" kind="show" id="48m-Bo-VQM"/>
+                        <segue destination="Q3i-oA-vPw" kind="show" identifier="segue" id="48m-Bo-VQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,24 +98,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePO-dP-J3o">
-                                <rect key="frame" x="55" y="171.66666666666663" width="298" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePO-dP-J3o">
+                                <rect key="frame" x="55" y="171.66666666666666" width="298" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-Pq-O2C">
+                                <rect key="frame" x="50" y="258.66666666666669" width="314" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-Pq-O2C">
-                                <rect key="frame" x="55" y="242" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_______________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwi-tc-Qbl">
+                                <rect key="frame" x="92" y="216" width="224" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.88814641497461932" green="0.88814641497461932" blue="0.88814641497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dKP-0c-HYF" firstAttribute="trailing" secondItem="Bwi-tc-Qbl" secondAttribute="trailing" constant="98" id="39Q-mk-stp"/>
+                            <constraint firstItem="y1N-Pq-O2C" firstAttribute="leading" secondItem="dKP-0c-HYF" secondAttribute="leading" constant="50" id="BON-YM-G4e"/>
                             <constraint firstItem="dKP-0c-HYF" firstAttribute="trailing" secondItem="ePO-dP-J3o" secondAttribute="trailing" constant="61" id="GcP-rh-rDg"/>
+                            <constraint firstItem="y1N-Pq-O2C" firstAttribute="top" secondItem="ePO-dP-J3o" secondAttribute="bottom" constant="50" id="HUl-C9-8tA"/>
                             <constraint firstItem="ePO-dP-J3o" firstAttribute="leading" secondItem="dKP-0c-HYF" secondAttribute="leading" constant="55" id="bmA-dD-6kB"/>
+                            <constraint firstItem="ePO-dP-J3o" firstAttribute="top" secondItem="dKP-0c-HYF" secondAttribute="top" constant="83.670000000000002" id="dvU-V6-nzm"/>
+                            <constraint firstItem="Bwi-tc-Qbl" firstAttribute="top" secondItem="ePO-dP-J3o" secondAttribute="bottom" constant="7.3300000000000001" id="lbQ-fv-mBc"/>
+                            <constraint firstItem="dKP-0c-HYF" firstAttribute="trailing" secondItem="y1N-Pq-O2C" secondAttribute="trailing" constant="50" id="oFb-Bi-hQ2"/>
+                            <constraint firstItem="Bwi-tc-Qbl" firstAttribute="leading" secondItem="dKP-0c-HYF" secondAttribute="leading" constant="92" id="s9l-0n-n36"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dKP-0c-HYF"/>
                     </view>
